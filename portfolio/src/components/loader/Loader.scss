@@ -1,0 +1,68 @@
+@import "../../App.scss";
+
+.loader{
+    height: 100vh;
+    width: 100vw;
+    align-content:center;
+    overflow: hidden;
+
+    .wrapper{
+        width:50%;
+        margin: auto;
+        text-align: center;
+
+        @include mobile{
+          width: 100%;
+          margin: auto;
+          text-align: center;
+        }
+
+        h2{
+            font-size: 2.5rem;
+            letter-spacing: 20px;
+            font-weight: 800;
+            color: white;
+            margin-top: 2rem;
+            position: relative;
+            animation: lightEffect 2s forwards, moveLight 2s 2s forwards, disappear 2s 4s forwards;
+            opacity: 0;
+
+            @include mobile{
+              font-size: 1.5rem;
+              margin-left: 20px;
+            }
+
+        }
+    }
+
+        @keyframes lightEffect {
+            0% {
+              text-shadow: 0 0 10px rgba(255, 255, 255, 0);
+              opacity: 0;
+            }
+            100% {
+              text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 255, 255, 0.6);
+              opacity: 1;
+            }
+          }
+        
+          @keyframes moveLight {
+            0% {
+              text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), -50px 0 60px rgba(255, 255, 255, 0.6);
+            }
+            100% {
+              text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 50px 0 60px rgba(255, 255, 255, 0.6);
+            }
+          }
+        
+          @keyframes disappear {
+            0% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              transform: translateY(-50px);
+            }
+
+    }
+}

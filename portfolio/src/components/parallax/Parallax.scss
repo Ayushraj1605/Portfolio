@@ -1,0 +1,44 @@
+.parallax{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // z-index: 999;
+    overflow: hidden;
+
+    h1{
+        font-size: 100px;
+        z-index: 999;
+    }
+
+    .mountains{
+        background-image:url("https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/mountains_front.png");
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+    }
+    .planets{
+        background-image:url("https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/moon.png");
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        mix-blend-mode: screen;
+        z-index: 1;
+    }
+    .stars{
+        background-image:url("https://raw.githubusercontent.com/Ryoley/moonlight-parallax/main/assets/images/stars.png");
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+}
